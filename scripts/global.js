@@ -96,7 +96,7 @@ function moveElement(elementID, final_x, final_y, interval) {
     elem.movement = setTimeout(repeat, interval);
 }
 
-//home
+//index
 function prepareImgShow() {
     if (!document.getElementById || !document.createElement ||
         !document.getElementsByTagName) return false;
@@ -124,7 +124,7 @@ function prepareImgShow() {
     for (var i = 0; i < links.length; i++) {
         links[i].onmouseover = function() {
             var destination = this.getAttribute("href");
-            if (destination.indexOf("home.html") != -1) {
+            if (destination.indexOf("index.html") != -1) {
                 moveElement("preview", 0, 0, 5);
             }
             if (destination.indexOf("about.html") != -1) {
@@ -304,38 +304,34 @@ function displayAbbreviations() {
 }
 
 //contact
-function focusLabels() {
-    if (!document.getElementsByTagName) return false;
-    var labels = document.getElementsByTagName("label");
-    for (var i = 0; i < labels.length; i++) {
-        if (!labels[i].getAttribute("for")) continue;
-        labels[i].onclick = function() {
-            var id = this.getAttribute("for");
-            if (!document.getElementById(id)) return false;
-            var element = document.getElementById(id);
-            element.focus();
-        }
-    }
-}
-
-function resetFields(whichform) {
-    if (Modernizr.input.placeholder) return;
-    for (var i = 0; i < whichform.elements.length; i++) {
-        var element = whichform.elements[i];
-        if (element.type == "submit ")
-    }
-}
-
-
-
-
+// function focusLabels() {
+//     if (!document.getElementsByTagName) return false;
+//     var labels = document.getElementsByTagName("label");
+//     for (var i = 0; i < labels.length; i++) {
+//         if (!labels[i].getAttribute("for")) continue;
+//         labels[i].onclick = function() {
+//             var id = this.getAttribute("for");
+//             if (!document.getElementById(id)) return false;
+//             var element = document.getElementById(id);
+//             element.focus();
+//         }
+//     }
+// }
+//
+// function resetFields(whichform) {
+//     if (Modernizr.input.placeholder) return;
+//     for (var i = 0; i < whichform.elements.length; i++) {
+//         var element = whichform.elements[i];
+//         if (element.type == "submit ")
+//     }
+// }
 
 
 
 
 
 function loadEvents() {
-    // home
+    // index
     prepareImgShow();
     // about
     prepareSection();
