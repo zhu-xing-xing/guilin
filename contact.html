@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GuiLin shan shui</title>
+    <script src="scripts/modernizr-1.6.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" media="screen">
+</head>
+
+<body>
+    <header id="header">
+        <img src="images/logo.gif" alt="the view of Guilin">
+        <nav>
+            <ul>
+                <li><a href="home.html">首页</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="photos.html">风光</a></li>
+                <li><a href="live.html">行程介绍</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- /header -->
+    <article>
+        <h1>联系我们</h1>
+        <form method="post" action="submit.html">
+            <fieldset>
+                <p>
+                    <label for="name">姓名:</label>
+                    <input type="text" id="name" name="name" placeholder="输入姓名" required="required" />
+                </p>
+                <p>
+                    <label for="email">邮箱:</label>
+                    <input type="email" id="email" name="email" placeholder="输入邮箱地址" required="required" />
+                </p>
+                <p>
+                    <label for="message">信息:</label>
+                    <textarea cols="45" rows="7" id="message" name="message" required="required" placeholder="输入信息内容"></textarea>
+                </p>
+                <input type="submit" value="Send" />
+            </fieldset>
+        </form>
+    </article>
+    <script src="scripts/global.js"></script>
+</body>
+
+</html>
